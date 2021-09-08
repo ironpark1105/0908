@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /* 속성: 사물의 특징을 의미
+            사람: 머리, 팔, 다리, 몸통
+              로보트1 = 머리, 팔, 몸통, 바퀴
+              로보트2 = 머리, 팔, 몸통, 다리
+            예) 고객정보
+                  이름, 나이, 성별, 직업
+    
+                  결국은 다 변수임
+        */
+       // 로보트1 변수로 정의
+       var 로보트1_head = 1;
+       var 로보트1_arm = 2;
+       var 로보트1_body = 1;
+       var 로보트1_wheel = 2;
+    
+       var result = `로보트1완성 = 머리 ${로보트1_head}개, 팔 ${로보트1_arm = 2}개, 몸통은 ${로보트1_body}개, 바퀴는 ${로보트1_wheel = 2}개 `;
+    
+       document.write(result);
+    
+      // 로봇 object(객체)
+      var 로보트1 = {
+        // 속성
+        head: 1,
+        arm: 2,
+        body: 1,
+        wheel: 2,
+        info: function(){
+          console.log('함수객체');
+        }
+      }
+    
+      // 객체 변수 확인하기: 로보트1.head
+      // objectName.propertyName  객체명.속성
+    
+      // '로보트1'의 머리를 출력하기
+      document.write('<br>' + 로보트1.head);
+    
+      // '로보트1'의 팔을 출력하기
+    
+    
+      </script>
+    
+</body>
+</html>

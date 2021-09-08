@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <style>
+        #random{
+            border:  2px red solid;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="random"> 여기에 랜덤값 출력 </p>
+    <script>
+        //const pi = Math.PI;
+        //.write("<br>pi = ", pi)
+
+        //var num = 2.8;
+        //var result = Math.round(num);
+//
+        //result = Math.ceil(num);
+        //document.write("<br>ceil value =", result);
+        
+        // = Math.floor(num);
+       // document.write("<br>floor value =", result);
+//
+var r = Math.floor(Math.random() * 3 + 1);
+    
+    // 요소(문서객체) 선택(DOM - document objec)
+    var p = document.getElementById('random');
+    p.innerHTML = r;
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

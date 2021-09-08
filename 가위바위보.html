@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>r가위바위보</title>
+    <style>
+        #user, #com {
+          width: 50%;
+          float: left;
+          background: #ccc;
+          padding: 20px;
+          box-sizing: border-box;
+          font-size: 40px;
+        }
+        #com {
+          background: pink;
+        }
+      </style>
+</head>
+<body>
+<h1>가위, 바위, 보 맞추기 게임</h1>
+<div id="user">내가 낸 결과</div>
+<div id="com">컴퓨터가가 낸 결과</div>
+
+<script>
+    //변수입력
+    var userInput = prompt("가위 바위 보 중 선택하세요","가위"); 
+    var gameNum;
+    switch(userInput){
+        case "가위": gameNum = 1
+        break;
+        case "바위": gameNum = 2
+        break;
+        case "보": gameNum = 3
+        break;
+        default:
+             alert("잘못입력했습니다!");
+             location.reload();
+    }
+
+    // 2.컴퓨터
+    var com = Math.floor(Math.random()*3) + 1;
+    var comText;
+    console.log(com)
+    // 컴퓨터의 숫자값을 문자로 변환
+    switch(com) {
+      case 1: comText = "가위"; break;
+      case 2: comText = "바위"; break;
+      case 3: comText = "보"; break;
+    }
+
+    // UI에 정보를 출력
+    document.getElementById('user').innerHTML = userInput;
+    document.getElementById('com').innerHTML = comText;
+
+    // 3.게임판정 및 결과
+    if(gameNum == com) {
+      // 잘 맞췄습니다!
+      document.write('<p style="font-size: 30px;">잘 맞췄습니다!</p>');
+    } else {
+      // 틀렸습니다.
+      document.write('<p style="font-size: 30px;color:red;">틀렸습니다.</p>');
+    }
+
+    //결과
+</script>
+
+
+
+
+    
+</body>
+</html>
